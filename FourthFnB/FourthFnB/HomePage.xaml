@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourthFnB.HomePage"
+             xmlns:sresource="clr-namespace:FourthFnB.Translation;assembly=FourthFnB">
+    
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+        <Label  x:Name="accessTokenLbl" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Picker x:Name="sitePkr" Title="{sresource:Translate Text=SitePickerTitle}"  SelectedIndexChanged="OnSiteSelectedIndexChanged"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        <Label  x:Name="stockPeriodLbl" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Label  x:Name="barcodeLbl" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Button x:Name="ScanBarcodeBtn"  Text="{sresource:Translate Text=StockCountBarcodeButton}" Clicked="OnStockCountBarcodeButtonClicked" HorizontalOptions ="Center"/>
+            <Button  x:Name="SearchBtn" Text="{sresource:Translate Text=StockCountSearchButton}" Clicked="OnStockCountSearchButtonClicked" HorizontalOptions ="Center"/>
+        <Button Text="{sresource:Translate Text=DownloadStockItemButton}" Clicked="OnDownloadStockItemButtonClicked" HorizontalOptions ="Center"/>
+            <Button  x:Name="UploadBtn" Text="{sresource:Translate Text=UploadStockItemButton}" Clicked="OnUploadStockItemButtonClicked" HorizontalOptions ="Center"/>
+
+            <Button  x:Name="ViewBtn" Text="{sresource:Translate Text=ViewStockCountButton}" Clicked="OnViewStockCountButtonClicked" HorizontalOptions ="Center"/>
+    </StackLayout>
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsEnabled="{Binding IsBusy}"  Color="Black" BackgroundColor="Gray" Opacity="0.3"
+                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />
+    </AbsoluteLayout>
+</ContentPage>

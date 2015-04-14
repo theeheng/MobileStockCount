@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSoft.Themes</name>
+    </assembly>
+    <members>
+        <member name="T:DSoft.Themes.Flyout.DSFlyoutTheme">
+            <summary>
+            Base flyout theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.CurrentTheme">
+            <summary>
+            Gets or sets the current theme.
+            </summary>
+            <value>The current theme.</value>
+        </member>
+        <member name="M:DSoft.Themes.Flyout.DSFlyoutTheme.Register``1">
+            <summary>
+            Register the theme as the current theme
+            </summary>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuTextColor">
+            <summary>
+            Gets or sets the color of the menu text.
+            </summary>
+            <value>The color of the menu text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuSelectedTextColor">
+            <summary>
+            Gets or sets the color of the menu text when selected
+            </summary>
+            <value>The color of the menu selected text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuHighlightedTextColor">
+            <summary>
+            Gets or sets the color of the menu text when its highlighted.
+            </summary>
+            <value>The color of the menu text highlighted.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuSegmentTextColor">
+            <summary>
+            Gets or sets the color of the text for a segment header
+            </summary>
+            <value>The color of the menu segment text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuBackgroundColor">
+            <summary>
+            Returns the color of the background menu
+            </summary>
+            <value>The color of the menu background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuSelectedBackgroundColor">
+            <summary>
+            Gets or sets the color of the menu item when selected.
+            </summary>
+            <value>The color of the menu item selected.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutTheme.MenuHighLightedBackgroundColor">
+            <summary>
+            Gets or sets the color of the menu item when highlighted.
+            </summary>
+            <value>The color of the menu item high lighted.</value>
+        </member>
+        <member name="T:DSoft.Themes.Toolbar.DSToolbarTheme">
+            <summary>
+            Toolbar theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Toolbar.DSToolbarTheme.CurrentTheme">
+            <summary>
+            Gets or sets the current theme.
+            </summary>
+            <value>The current theme.</value>
+        </member>
+        <member name="M:DSoft.Themes.Toolbar.DSToolbarTheme.Register``1">
+            <summary>
+            Register theme as the current theme
+            </summary>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="P:DSoft.Themes.Toolbar.DSToolbarTheme.Color">
+            <summary>
+            Gets or sets the color of the toolbar
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="T:DSoft.Themes.Toolbar.DSToolbarDefaultTheme">
+            <summary>
+            Default Toolbar theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Toolbar.DSToolbarDefaultTheme.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="T:DSoft.Themes.Flyout.DSFlyoutDefaultTheme">
+            <summary>
+            Flyout Theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuTextColor">
+            <summary>
+            Gets or sets the color of the menu text.
+            </summary>
+            <value>The color of the menu text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuSelectedTextColor">
+            <summary>
+            Gets or sets the color of the menu text when selected
+            </summary>
+            <value>The color of the menu selected text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuHighlightedTextColor">
+            <summary>
+            Gets or sets the color of the menu text when its highlighted.
+            </summary>
+            <value>The color of the menu text highlighted.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuSegmentTextColor">
+            <summary>
+            Gets or sets the color of the text for a segment header
+            </summary>
+            <value>The color of the menu segment text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuBackgroundColor">
+            <summary>
+            Returns the color of the background menu
+            </summary>
+            <value>The color of the menu background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuSelectedBackgroundColor">
+            <summary>
+            Gets or sets the color of the menu item when selected.
+            </summary>
+            <value>The color of the menu item selected.</value>
+        </member>
+        <member name="P:DSoft.Themes.Flyout.DSFlyoutDefaultTheme.MenuHighLightedBackgroundColor">
+            <summary>
+            Gets or sets the color of the menu item when highlighted.
+            </summary>
+            <value>The color of the menu item high lighted.</value>
+        </member>
+        <member name="T:DSoft.Themes.Grid.DSGridTheme">
+            <summary>
+            Base Grid View Theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.Current">
+            <summary>
+            Gets or sets the current theme
+            </summary>
+            <value>The current.</value>
+        </member>
+        <member name="M:DSoft.Themes.Grid.DSGridTheme.Register``1">
+            <summary>
+            Register a Theme
+            </summary>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="E:DSoft.Themes.Grid.DSGridTheme.OnThemeChanged">
+            <summary>
+            Called when the theme is changed
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.BorderWidth">
+            <summary>
+            Gets the width of the grid border.
+            </summary>
+            <value>The width of the grid border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.BackgroundColor">
+            <summary>
+            Gets the color of the grid background.
+            </summary>
+            <value>The color of the grid background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.BorderColor">
+            <summary>
+            Gets the color of the grid border.
+            </summary>
+            <value>The color of the grid border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderHeight">
+            <summary>
+            Height of the Header Row/View
+            </summary>
+            <value>The height of the header.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderStyle">
+            <summary>
+            Gets the header style of the grid
+            </summary>
+            <value>The header style.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderBackground">
+            <summary>
+            Gets the color of the header.
+            </summary>
+            <value>The color of the header.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderTextForeground">
+            <summary>
+            Gets the color of the header text.
+            </summary>
+            <value>The color of the header text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderTextAlignment">
+            <summary>
+            Gets the cell text alignment.
+            </summary>
+            <value>The cell text alignment.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderTextFont">
+            <summary>
+            Gets the header font.
+            </summary>
+            <value>The header font.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderSortIndicatorUp">
+            <summary>
+            Gets the UIImage to use for the sort indicator when pointing up
+            </summary>
+            <value>UIImage</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.HeaderSortIndicatorDown">
+            <summary>
+            Gets the UIImage to use for the sort indicator when pointing down
+            </summary>
+            <value>UIImage</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellBorderStyle">
+            <summary>
+            Gets the cell border style.
+            </summary>
+            <value>The cell border style.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellBorderWidth">
+            <summary>
+            Gets the width of the cell border.
+            </summary>
+            <value>The width of the cell border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellBackground">
+            <summary>
+            Gets the color of the cell background.
+            </summary>
+            <value>The color of the cell background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellBackground2">
+            <summary>
+            Gets the color of the cell background for the alternating row
+            </summary>
+            <value>The color of the cell background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellBackgroundHighlight">
+            <summary>
+            Gets the color of the cell background when the row is highlighted.
+            </summary>
+            <value>The color of the cell highlight.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellTextForeground">
+            <summary>
+            Gets the color of the cell text.
+            </summary>
+            <value>The color of the cell text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellTextForeground2">
+            <summary>
+            Gets the cell text color for alternating row
+            </summary>
+            <value>The cell text color2.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellTextHighlight">
+            <summary>
+            Gets the color of the cell text when the row is highlighted.
+            </summary>
+            <value>The color of the cell text highlight.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellContentAlignment">
+            <summary>
+            Gets the cell text alignment.
+            </summary>
+            <value>The cell text alignment.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.CellTextFont">
+            <summary>
+            Gets the cell font.
+            </summary>
+            <value>The cell font.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridTheme.RowHeight">
+            <summary>
+            Gets the height of the row.
+            </summary>
+            <value>The height of the row.</value>
+        </member>
+        <member name="T:DSoft.Themes.Grid.DSGridDefaultTheme">
+            <summary>
+            Default DSGridView theme
+            </summary>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.BorderWidth">
+            <summary>
+            Gets the width of the grid border.
+            </summary>
+            <value>The width of the grid border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.BackgroundColor">
+            <summary>
+            Gets the color of the grid background.
+            </summary>
+            <value>The color of the grid background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.BorderColor">
+            <summary>
+            Gets the color of the grid border.
+            </summary>
+            <value>The color of the grid border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderBackground">
+            <summary>
+            Gets the color of the header.
+            </summary>
+            <value>The color of the header.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderTextForeground">
+            <summary>
+            Gets the color of the header text.
+            </summary>
+            <value>The color of the header text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderHeight">
+            <summary>
+            Height of the Header Row/View
+            </summary>
+            <value>The height of the header.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderStyle">
+            <summary>
+            Gets the header style of the grid
+            </summary>
+            <value>The header style.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderTextAlignment">
+            <summary>
+            Gets the cell text alignment.
+            </summary>
+            <value>The cell text alignment.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderTextFont">
+            <summary>
+            Gets the header font.
+            </summary>
+            <value>The header font.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderSortIndicatorUp">
+            <summary>
+            Gets the UIImage to use for the sort indicator when pointing up
+            </summary>
+            <value>UIImage</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.HeaderSortIndicatorDown">
+            <summary>
+            Gets the UIImage to use for the sort indicator when pointing down
+            </summary>
+            <value>UIImage</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellBackground">
+            <summary>
+            Gets the color of the cell background.
+            </summary>
+            <value>The color of the cell background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellBackground2">
+            <summary>
+            Gets the color of the cell background for the alternating row
+            </summary>
+            <value>The color of the cell background.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellBackgroundHighlight">
+            <summary>
+            Gets the color of the cell background when the row is highlighted.
+            </summary>
+            <value>The color of the cell highlight.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellTextForeground">
+            <summary>
+            Gets the color of the cell text.
+            </summary>
+            <value>The color of the cell text.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellTextForeground2">
+            <summary>
+            Gets the cell text color for alternating row
+            </summary>
+            <value>The cell text color2.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellTextHighlight">
+            <summary>
+            Gets the color of the cell text when the row is highlighted.
+            </summary>
+            <value>The color of the cell text highlight.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellBorderStyle">
+            <summary>
+            Gets the cell border style.
+            </summary>
+            <value>The cell border style.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellBorderWidth">
+            <summary>
+            Gets the width of the cell border.
+            </summary>
+            <value>The width of the cell border.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellContentAlignment">
+            <summary>
+            Gets the cell text alignment.
+            </summary>
+            <value>The cell text alignment.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.CellTextFont">
+            <summary>
+            Gets the cell font.
+            </summary>
+            <value>The cell font.</value>
+        </member>
+        <member name="P:DSoft.Themes.Grid.DSGridDefaultTheme.RowHeight">
+            <summary>
+            Gets the height of the row.
+            </summary>
+            <value>The height of the row.</value>
+        </member>
+        <member name="M:DSoft.Themes.ResourceHelper.LoadResource(System.String)">
+            <summary>
+            Loads the specified resource.
+            </summary>
+            <returns>The resource.</returns>
+            <param name="Name">Name.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,155 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DomainInterface;
+using Xamarin.Forms;
+
+namespace FourthFnB
+{
+    public class BindablePicker : Picker
+    {
+        #region Fields
+
+        //Bindable property for the items source
+        public static readonly BindableProperty ItemsSourceProperty =
+            BindableProperty.Create<BindablePicker, IEnumerable>(p => p.ItemsSource, null, propertyChanged: OnItemsSourcePropertyChanged);
+
+        //Bindable property for the selected item
+        public static readonly BindableProperty SelectedItemProperty =
+            BindableProperty.Create<BindablePicker, object>(p => p.SelectedItem, null, BindingMode.TwoWay, propertyChanged: OnSelectedItemPropertyChanged);
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets the items source.
+        /// </summary>
+        /// <value>
+        /// The items source.
+        /// </value>
+        public IEnumerable ItemsSource
+        {
+            get { return (IEnumerable)GetValue(ItemsSourceProperty); }
+            set { SetValue(ItemsSourceProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the selected item.
+        /// </summary>
+        /// <value>
+        /// The selected item.
+        /// </value>
+        public object SelectedItem
+        {
+            get { return GetValue(SelectedItemProperty); }
+            set { SetValue(SelectedItemProperty, value); }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Called when [items source property changed].
+        /// </summary>
+        /// <param name="bindable">The bindable.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="newValue">The new value.</param>
+        private static void OnItemsSourcePropertyChanged(BindableObject bindable, IEnumerable value, IEnumerable newValue)
+        {
+            var picker = (BindablePicker)bindable;
+            var notifyCollection = newValue as INotifyCollectionChanged;
+            if (notifyCollection != null)
+            {
+                notifyCollection.CollectionChanged += (sender, args) =>
+                {
+                    if (args.NewItems != null)
+                    {
+                        foreach (IBindablePicker newItem in args.NewItems)
+                        {
+                            if (newItem != null)
+                            {
+                                picker.Items.Add(newItem.GetBindableName());
+                            }
+                        }
+                    }
+                    if (args.OldItems != null)
+                    {
+                        foreach (IBindablePicker oldItem in args.OldItems)
+                        {
+                            if (oldItem != null)
+                            {
+                                picker.Items.Remove(oldItem.GetBindableName());
+                            }
+                        }
+                    }
+                };
+            }
+
+            if (newValue == null)
+                return;
+
+            picker.Items.Clear();
+
+            foreach (IBindablePicker item in newValue)
+            {
+                if (item != null)
+                {
+                    picker.Items.Add(item.GetBindableName());
+                }              
+            }
+
+            picker.SelectedIndex = 0;
+        }
+
+        /// <summary>
+        /// Called when [selected item property changed].
+        /// </summary>
+        /// <param name="bindable">The bindable.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="newValue">The new value.</param>
+        private static void OnSelectedItemPropertyChanged(BindableObject bindable, object value, object newValue)
+        {
+            var picker = (BindablePicker)bindable;
+            if (picker.ItemsSource != null)
+                picker.SelectedIndex = picker.ItemsSource.IndexOf(picker.SelectedItem);
+        }
+
+        #endregion
+    }
+
+    public static class EnumerableExtensions
+    {
+        /// <summary>
+        /// Returns the index of the specified object in the collection.
+        /// </summary>
+        /// <param name="self">The self.</param>
+        /// <param name="obj">The object.</param>
+        /// <returns>If found returns index otherwise -1</returns>
+        public static int IndexOf(this IEnumerable self, object obj)
+        {
+            int index = -1;
+
+            var enumerator = self.GetEnumerator();
+            enumerator.Reset();
+            int i = 0;
+            while (enumerator.MoveNext())
+            {
+                if (enumerator.Current == obj)
+                {
+                    index = i;
+                    break;
+                }
+
+                i++;
+            }
+
+            return index;
+        }
+    }
+}

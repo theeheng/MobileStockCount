@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourthFnB.OrganisationProfilePage"
+             xmlns:sresource="clr-namespace:FourthFnB.Translation;assembly=FourthFnB">
+
+    <AbsoluteLayout HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <Label x:Name="accessTokenLbl"  VerticalOptions="Center" HorizontalOptions="Center" />
+        <Picker x:Name="organisationPkr" Title="{sresource:Translate Text=OrganisationPickerTitle}"  SelectedIndexChanged="OnOrganisationSelectedIndexChanged"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        <Picker x:Name="userProfilePkr" Title="{sresource:Translate Text=UserProfilePickerTitle}"  SelectedIndexChanged="OnUserProfileSelectedIndexChanged"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+    <Button Text="{sresource:Translate Text=NextButton}" Clicked="OnNextButtonClicked" HorizontalOptions ="Center"/>
+</StackLayout>
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsEnabled="{Binding IsBusy}"  Color="Black" BackgroundColor="Gray" Opacity="0.3"
+                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />
+    </AbsoluteLayout>
+</ContentPage>

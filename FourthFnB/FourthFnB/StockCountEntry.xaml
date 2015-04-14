@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FourthFnB;assembly=FourthFnB"
+             x:Class="FourthFnB.StockCountEntry"
+             xmlns:sresource="clr-namespace:FourthFnB.Translation;assembly=FourthFnB">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:Translate Text=ProductNameLabel}" x:Name="ProductNameLbl" />
+                <Label Text="{Binding ItemName}" VerticalOptions="Center" HorizontalOptions="Center"  x:Name="ProductName" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:Translate Text=CategoryLabel}" x:Name="CategoryLbl" />
+                <Label Text="{Binding CategoryHierarchy}" VerticalOptions="Center" HorizontalOptions="Center"  x:Name="Category" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:Translate Text=UomLabel}" x:Name="UomLbl"  />
+                <local:BindablePicker x:Name="uomPkr" Title="{sresource:Translate Text=UomPickerTitle}"  SelectedIndexChanged="OnUomSelectedIndexChanged"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding StockItemSizes}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:Translate Text=CostPriceLabel}" x:Name="CostPriceLbl"  />
+                <Label Text="{Binding CostPrice}" x:Name="CostPrice"  />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:Translate Text=QuantityLabel}" x:Name="QuantityLbl"  />
+                <Entry x:Name="Quantity"  HorizontalOptions="FillAndExpand" TextChanged="OnQuantityTextChanged" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="{sresource:TranslateExtension Text=TotalValueLabel}" x:Name="TotalLbl"  />
+                <Label x:Name="TotalValue"  />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Button Text="{sresource:Translate Text=BackButton}" Clicked="OnBackButtonClicked" HorizontalOptions ="Center"/>
+                <Button Text="{sresource:Translate Text=SaveButton}" Clicked="OnSaveButtonClicked" HorizontalOptions ="Center"/>
+            </StackLayout>
+
+        </StackLayout>
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsEnabled="{Binding IsBusy}"  Color="Black" BackgroundColor="Gray" Opacity="0.3"
+                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />
+    </AbsoluteLayout>
+</ContentPage>

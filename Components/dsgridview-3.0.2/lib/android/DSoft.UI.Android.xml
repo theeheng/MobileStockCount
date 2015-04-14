@@ -1,0 +1,1054 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSoft.UI.Android</name>
+    </assembly>
+    <members>
+        <member name="T:ContextExtensions">
+            <summary>
+            Global Extensions for the Android Context
+            </summary>
+        </member>
+        <member name="M:ContextExtensions.GetWindowManager(Android.Content.Context)">
+            <summary>
+            Gets the window manager for the context
+            </summary>
+            <returns>The window manager.</returns>
+            <param name="Owner">Owner.</param>
+        </member>
+        <member name="M:ContextExtensions.ToDevicePixels(Android.Content.Context,System.Int32)">
+            <summary>
+            Converts the dp value to the pixels on the device, based on the display density
+            </summary>
+            <returns>The device pixels.</returns>
+            <param name="ctx">Context.</param>
+            <param name="dp">Dp.</param>
+        </member>
+        <member name="M:ContextExtensions.ToDevicePixels(Android.Content.Context,System.Int32,System.Single)">
+            <summary>
+            Converts the dp value to the pixels on the device, based on the display density
+            </summary>
+            <returns>The device pixels.</returns>
+            <param name="ctx">Context.</param>
+            <param name="dp">Dp.</param>
+            <param name="offset">Addtional Offset</param>
+        </member>
+        <member name="T:DSoft.UI.Core.AndroidCore">
+            <summary>
+            Access to core android functions
+            </summary>
+        </member>
+        <member name="T:DSoft.UI.Views.DSToolbarView">
+            <summary>
+            Toolbar View
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Views.DSToolbarView.ContentView">
+            <summary>
+            Gets the content view.
+            </summary>
+            <value>The content view.</value>
+        </member>
+        <member name="P:DSoft.UI.Views.DSToolbarView.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSToolbarView" /> class.
+            </summary>
+            <param name="javaReference">Java reference.</param>
+            <param name="transfer">Transfer.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSToolbarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSToolbarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSToolbarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Raises the measure event.
+            </summary>
+            <param name="widthMeasureSpec">Width measure spec.</param>
+            <param name="heightMeasureSpec">Height measure spec.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSToolbarView.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <Docs>This is a new size or position for this view</Docs>
+            <remarks>Called from layout when this view should
+            assign a size and position to each of its children.
+            Derived classes with children should override
+            this method and call layout on each of
+            their children.</remarks>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 1">
+            </since>
+            <summary>
+            Raises the layout event.
+            </summary>
+            <param name="changed">If set to <c>true</c> changed.</param>
+            <param name="l">L.</param>
+            <param name="t">T.</param>
+            <param name="r">The red component.</param>
+            <param name="b">The blue component.</param>
+        </member>
+        <member name="T:DSoft.UI.Views.DSNavigationBarView">
+            <summary>
+            Navigation bar view
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Views.DSNavigationBarView.LeftButton">
+            <summary>
+            Gets or sets the left button
+            </summary>
+            <value>The right button command.</value>
+        </member>
+        <member name="P:DSoft.UI.Views.DSNavigationBarView.RightButton">
+            <summary>
+            Gets or sets the right button.
+            </summary>
+            <value>The right button.</value>
+        </member>
+        <member name="P:DSoft.UI.Views.DSNavigationBarView.LeftButtons">
+            <summary>
+            Gets or sets the left buttons collection
+            </summary>
+            <value>The right buttons.</value>
+        </member>
+        <member name="P:DSoft.UI.Views.DSNavigationBarView.RightButtons">
+            <summary>
+            Gets or sets the right buttons collection
+            </summary>
+            <value>The right buttons.</value>
+        </member>
+        <member name="P:DSoft.UI.Views.DSNavigationBarView.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSNavigationBarView" /> class.
+            </summary>
+            <param name="javaReference">Java reference.</param>
+            <param name="transfer">Transfer.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSNavigationBarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSNavigationBarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSNavigationBarView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.BuildLeftArea">
+            <summary>
+            Builds the left button area
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Views.DSNavigationBarView.BuildRightArea">
+            <summary>
+            Builds the right button area
+            </summary>
+        </member>
+        <member name="T:DSTypeExtensions">
+            <summary>
+            Extension for DSTypes
+            </summary>
+        </member>
+        <member name="M:DSTypeExtensions.ToAndroidColor(DSoft.Datatypes.Types.DSColor)">
+            <summary>
+            Converts the DSColor object to a Android.Graphics.Color object
+            </summary>
+            <returns>
+            </returns>
+            <param name="Item">
+            </param>
+        </member>
+        <member name="M:DSTypeExtensions.ToAndroidColorDrawable(DSoft.Datatypes.Types.DSColor)">
+            <summary>
+            Converts the DSColor object to a Android.Graphics.Drawables.ColorDrawable object
+            </summary>
+            <returns>The android color drawable.</returns>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="M:DSTypeExtensions.ToDSRectangle(System.Drawing.RectangleF)">
+            <summary>
+            Converts to DSRectangle
+            </summary>
+            <returns>The DS rectangle.</returns>
+            <param name="Frame">Frame.</param>
+        </member>
+        <member name="M:DSTypeExtensions.ToRectangleF(DSoft.Datatypes.Types.DSRectangle)">
+            <summary>
+            Converts to RectangleF
+            </summary>
+            <returns>The rectangle f.</returns>
+            <param name="Frame">Frame.</param>
+        </member>
+        <member name="M:DSTypeExtensions.ToDSBitmap(Android.Graphics.Bitmap)">
+            <summary>
+            convert android bitmap to DSBitmap
+            </summary>
+            <returns>The DS bitmap.</returns>
+            <param name="bmp">Bmp.</param>
+        </member>
+        <member name="M:DSTypeExtensions.ToBitmap(DSoft.Datatypes.Types.DSBitmap)">
+            <summary>
+            Convert to android bitmap
+            </summary>
+            <returns>The bitmap.</returns>
+            <param name="bmp">Bmp.</param>
+        </member>
+        <member name="T:DSoft.UI.Grid.DSGridViewActivity">
+            <summary>
+            Activity with built in DSGridView
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewActivity.GridView">
+            <summary>
+            Gets or sets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewActivity.DataSource">
+            <summary>
+            DataSource of the DataGrid
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewActivity.TableName">
+            <summary>
+            Gets or sets the name of the table.
+            </summary>
+            <value>The name of the table.</value>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewActivity.OnCreate(Android.OS.Bundle)">
+            <summary>
+            Raises the create event.
+            </summary>
+            <param name="bundle">Bundle.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewActivity.PrepareGridView">
+            <summary>
+            Prepares the grid view.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewActivity.OnDoubleCellTap(System.Object)">
+            <summary>
+            Called when a Cell double tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewActivity.OnSingleCellTap(System.Object)">
+            <summary>
+            Called when a Cell single tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewFragment.GridView">
+            <summary>
+            Gets or sets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewFragment.DataSource">
+            <summary>
+            DataSource of the DataGrid
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridViewFragment.ShowSelection">
+            <summary>
+            Highlight the selected row
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewFragment.OnDoubleCellTap(System.Object)">
+            <summary>
+            Called when a Cell double tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridViewFragment.OnSingleCellTap(System.Object)">
+            <summary>
+            Called when a Cell single tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="T:DSoft.UI.DSMultiDirectionScrollView">
+            <summary>
+            DS multi direction scroll view.
+            </summary>
+        </member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mTwoDScrollViewMovedFocus">
+            	     * Flag to indicate that we are moving focus ourselves. This is so the
+            	     * code that watches for focus changes initiated outside this TwoDScrollView
+            	     * knows that it does not have to do anything.</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mLastMotionY">
+                    * Position of the last motion event.</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mIsLayoutDirty">
+                    * True when the layout has changed but the traversal has not come through yet.
+                    * Ideally the view hierarchy would keep track of this for us.</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mChildToScrollTo">
+                    * The child to give focus to in the event that a child has requested focus while the
+                    * layout is dirty. This prevents the scroll from being wrong if the child has not been
+                    * laid out before requesting focus.</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mIsBeingDragged">
+                    * True if the user is currently dragging this TwoDScrollView around. This is
+                    * not the same as 'is being flinged', which can be checked by
+                    * mScroller.isFinished() (flinging begins when the user lifts his finger).</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mVelocityTracker">
+                    * Determines speed during touch scrolling</member>
+        <member name="F:DSoft.UI.DSMultiDirectionScrollView.mTouchSlop">
+                    * Whether arrow scrolling is animated.</member>
+        <member name="P:DSoft.UI.DSMultiDirectionScrollView.ContentOffset">
+            <summary>
+            Gets the content offset.
+            </summary>
+            <value>The content offset.</value>
+        </member>
+        <member name="P:DSoft.UI.DSMultiDirectionScrollView.Frame">
+            <summary>
+            Gets the frame.
+            </summary>
+            <value>The frame.</value>
+        </member>
+        <member name="P:DSoft.UI.DSMultiDirectionScrollView.MaxScrollAmountVertical">
+            <summary>
+            The maximum amount this scroll view will scroll in response to an arrow event.
+            </summary>
+            <value>The max scroll amount vertical.</value>
+        </member>
+        <member name="P:DSoft.UI.DSMultiDirectionScrollView.MaxScrollAmountHorizontal">
+            <summary>
+            The maximum amount this scroll view will scroll in response to an arrow event.
+            </summary>
+            <value>The max scroll amount horizontal.</value>
+        </member>
+        <member name="P:DSoft.UI.DSMultiDirectionScrollView.CanScroll">
+            <summary>
+            Gets a value indicating whether this instance can scroll.
+            </summary>
+            <value>
+                <c>true</c> if this instance can scroll; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.ExecuteKeyEvent(Android.Views.KeyEvent)">
+            	     * You can call this function yourself to have the scroll view perform
+            	     * scrolling from a key event, just as if the event had been dispatched to
+            	     * it by the view hierarchy.
+            	     *
+            	     * @param event The key event to execute.
+            	     * @return Return true if the event was handled, else false.</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.findFocusableViewInMyBounds(System.Boolean,System.Int32,System.Boolean,System.Int32,Android.Views.View)">
+            		  * Finds the next focusable component that fits in this View's bounds
+            		  * (excluding fading edges) pretending that this View's top is located at
+            		  * the parameter top.
+            		  *
+            		  * @param topFocus           look for a candidate is the one at the top of the bounds
+            		  *                           if topFocus is true, or at the bottom of the bounds if topFocus is
+            		  *                           false
+            		  * @param top                the top offset of the bounds in which a focusable must be
+            		  *                           found (the fading edge is assumed to start at this position)
+            		  * @param preferredFocusable the View that has highest priority and will be
+            		  *                           returned if it is within my bounds (null is valid)
+            		  * @return the next focusable component in the bounds or null if none can be
+            		  *         found</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.FindFocusableViewInBounds(System.Boolean,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Finds the focusable view in bounds.
+            </summary>
+            <returns>The focusable view in bounds.</returns>
+            <param name="topFocus">If set to <c>true</c> top focus.</param>
+            <param name="top">Top.</param>
+            <param name="bottom">Bottom.</param>
+            <param name="leftFocus">If set to <c>true</c> left focus.</param>
+            <param name="left">Left.</param>
+            <param name="right">Right.</param>
+        </member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.FullScroll(Android.Views.FocusSearchDirection,System.Boolean)">
+            		  * <p>Handles scrolling in response to a "home/end" shortcut press. This
+            		  * method will scroll the view to the top or bottom and give the focus
+            		  * to the topmost/bottommost component in the new visible area. If no
+            		  * component is a good candidate for focus, this scrollview reclaims the
+            		  * focus.</p>
+            		  *
+            		  * @param direction the scroll direction: {@link android.view.View#FOCUS_UP}
+            		  *                  to go the top of the view or
+            		  *                  {@link android.view.View#FOCUS_DOWN} to go the bottom
+            		  * @return true if the key event is consumed by this method, false otherwise</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.ScrollAndFocus(Android.Views.FocusSearchDirection,System.Int32,System.Int32,Android.Views.FocusSearchDirection,System.Int32,System.Int32)">
+            		  * <p>Scrolls the view to make the area defined by <code>top</code> and
+            		  * <code>bottom</code> visible. This method attempts to give the focus
+            		  * to a component visible in this area. If no component can be focused in
+            		  * the new visible area, the focus is reclaimed by this scrollview.</p>
+            		  *
+            		  * @param direction the scroll direction: {@link android.view.View#FOCUS_UP}
+            		  *                  to go upward
+            		  *                  {@link android.view.View#FOCUS_DOWN} to downward
+            		  * @param top       the top offset of the new area to be made visible
+            		  * @param bottom    the bottom offset of the new area to be made visible
+            		  * @return true if the key event is consumed by this method, false otherwise</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.arrowScroll(Android.Views.FocusSearchDirection,System.Boolean)">
+            		  * Handle scrolling in response to an up or down arrow click.
+            		  *
+            		  * @param direction The direction corresponding to the arrow key that was
+            		  *                  pressed
+            		  * @return True if we consumed the event, false otherwise</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.DoScroll(System.Int32,System.Int32)">
+            		  * Smooth scroll by a Y delta
+            		  *
+            		  * @param delta the number of pixels to scroll by on the Y axis</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.SmoothScrollBy(System.Int32,System.Int32)">
+            		  * Like {@link View#scrollBy}, but scroll smoothly instead of immediately.
+            		  *
+            		  * @param dx the number of pixels to scroll by on the X axis
+            		  * @param dy the number of pixels to scroll by on the Y axis</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.SmoothScrollTo(System.Int32,System.Int32)">
+            		  * Like {@link #scrollTo}, but scroll smoothly instead of immediately.
+            		  *
+            		  * @param x the position where to scroll on the X axis
+            		  * @param y the position where to scroll on the Y axis</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.ScrollToChild(Android.Views.View)">
+            		* Scrolls the view to the given child.
+            		*
+            		* @param child the View to scroll to</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.ScrollToChildRect(Android.Graphics.Rect,System.Boolean)">
+                     * If rect is off screen, scroll just enough to get it (or at least the
+                     * first screen size chunk of it) on screen.
+                     *
+                     * @param rect      The rectangle.
+                     * @param immediate True to scroll immediately without animation
+                     * @return true if scrolling was performed</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.ComputeScrollDeltaToGetChildRectOnScreen(Android.Graphics.Rect)">
+                     * Compute the amount to scroll in the Y direction in order to get
+                     * a rectangle completely on the screen (or, if taller than the screen,
+                     * at least the first screen size chunk of it).
+                     *
+                     * @param rect The rect.
+                     * @return The scroll delta.</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.OnRequestFocusInDescendants(Android.Views.FocusSearchDirection,Android.Graphics.Rect)">
+                     * When looking for focus in children of a scroll view, need to be a little
+                     * more careful not to give focus to something that is scrolled off screen.
+                     *
+                     * This is more expensive than the default {@link android.view.ViewGroup}
+                     * implementation, otherwise this behavior might have been made the default.</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.IsViewDescendantOf(Android.Views.View,Android.Views.View)">
+                     * Return true if child is an descendant of parent, (or equal to the parent).</member>
+        <member name="M:DSoft.UI.DSMultiDirectionScrollView.Fling(System.Int32,System.Int32)">
+                     * Fling the scroll view
+                     *
+                     * @param velocityY The initial velocity in the Y direction. Positive
+                     *                  numbers mean that the finger/curor is moving down the screen,
+                     *                  which means we want to scroll towards the top.</member>
+        <member name="M:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection" />. The <see cref="M:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection.Dispose" /> method leaves the
+            <see cref="T:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection" /> in an unusable state. After calling
+            <see cref="M:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection" /> so the garbage collector can reclaim the
+            memory that the <see cref="T:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection" /> was occupying.</remarks>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.Collections.DSGridRowViewCollection.ViewForRowIndex(System.Int32)">
+            <summary>
+            Returns the view with the row index
+            </summary>
+            <returns>The for row index.</returns>
+            <param name="RowIndex">Row index.</param>
+        </member>
+        <member name="T:DSoft.UI.Core.DSTextView">
+            <summary>
+            DSTextView class
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Core.DSTextView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Core.DSTextView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="T:DSoft.UI.Grid.Views.DSGridRowView">
+            <summary>
+            DSGridRowView
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridRowView.Processor">
+            <summary>
+            Gets the processor.
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridRowView.GridView">
+            <summary>
+            Gets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridRowView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridRowView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridRowView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.#ctor(DSoft.UI.Grid.DSGridView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridRowView" /> class.
+            </summary>
+            <param name="GridView">Grid view.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.#ctor(System.Int32,DSoft.UI.Grid.DSGridView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridRowView" /> class.
+            </summary>
+            <param name="Index">Index.</param>
+            <param name="aView">A view.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.Initialize">
+            <summary>
+            Initialize this instance.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.TearDown">
+            <summary>
+            Tears down the view
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridRowView.DetachView">
+            <summary>
+            Detaches the view for its parent
+            </summary>
+        </member>
+        <member name="T:DSoft.UI.Grid.Views.DSGridCellView">
+            <summary>
+            DSGridCellView definition
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridCellView.Processor">
+            <summary>
+            Gets the processor for the cell view
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridCellView.GridView">
+            <summary>
+            Gets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridCellView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.#ctor(DSoft.UI.Grid.DSGridView,DSoft.UI.Grid.Views.DSGridRowView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridCellView" /> class.
+            </summary>
+            <param name="GridView">Grid view.</param>
+            <param name="RowView">Row view.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridCellView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridCellView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.Initialize">
+            <summary>
+            Initialize this instance.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.TearDown">
+            <summary>
+            Tears down the view
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.DetachView">
+            <summary>
+            Detaches the view for its parent
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridCellView.OnTouchEvent(Android.Views.MotionEvent)">
+            <Docs>The motion event.</Docs>
+            <returns>To be added.</returns>
+            <para tool="javadoc-to-mdoc">Implement this method to handle touch screen motion events.</para>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 1">
+            </since>
+            <summary>
+            Raises the touch event event.
+            </summary>
+            <param name="ev">Ev.</param>
+        </member>
+        <member name="T:DSoft.UI.Views.DSAbsoluteLayout">
+            <summary>
+            DS absolute layout.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSAbsoluteLayout" /> class.
+            </summary>
+            <param name="javaReference">Java reference.</param>
+            <param name="transfer">Transfer.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSAbsoluteLayout" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSAbsoluteLayout" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Views.DSAbsoluteLayout" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Raises the measure event.
+            </summary>
+            <param name="widthMeasureSpec">Width measure spec.</param>
+            <param name="heightMeasureSpec">Height measure spec.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.GenerateDefaultLayoutParams">
+            <Docs>Returns a set of default layout parameters.</Docs>
+            <summary>
+            Generates the default layout parameters.
+            </summary>
+            <returns>The default layout parameters.</returns>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <Docs>This is a new size or position for this view</Docs>
+            <remarks>Called from layout when this view should
+            assign a size and position to each of its children.
+            Derived classes with children should override
+            this method and call layout on each of
+            their children.</remarks>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 1">
+            </since>
+            <summary>
+            Raises the layout event.
+            </summary>
+            <param name="changed">If set to <c>true</c> changed.</param>
+            <param name="l">L.</param>
+            <param name="t">T.</param>
+            <param name="r">The red component.</param>
+            <param name="b">The blue component.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.GenerateLayoutParams(Android.Util.IAttributeSet)">
+            <summary>
+            Generates the layout parameters.
+            </summary>
+            <returns>The layout parameters.</returns>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.CheckLayoutParams(Android.Views.ViewGroup.LayoutParams)">
+            <Docs>To be added.</Docs>
+            <returns>To be added.</returns>
+            <para tool="javadoc-to-mdoc">
+            </para>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 1">
+            </since>
+            <summary>
+            Checks the layout parameters.
+            </summary>
+            <param name="p">P.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.GenerateLayoutParams(Android.Views.ViewGroup.LayoutParams)">
+            <summary>
+            Generates the layout parameters.
+            </summary>
+            <returns>The layout parameters.</returns>
+            <param name="p">P.</param>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.ShouldDelayChildPressedState">
+            <Docs>Return true if the pressed state should be delayed for children or descendants of this
+            ViewGroup.</Docs>
+            <remarks>Return true if the pressed state should be delayed for children or descendants of this
+            ViewGroup. Generally, this should be done for containers that can scroll, such as a List.
+            This prevents the pressed state from appearing when the user is actually trying to scroll
+            the content.
+            The default implementation returns true for compatibility reasons. Subclasses that do
+            not scroll should generally override this method and return false.</remarks>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 14">
+            </since>
+            <summary>
+            Shoulds the state of the delay child pressed.
+            </summary>
+            <returns>
+                <c>true</c>, if delay child pressed state was shoulded, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:DSoft.UI.Views.DSAbsoluteLayout.DSAbsoluteLayoutParams">
+            <summary>
+            DSABsolute Layout parameters.
+            </summary>
+        </member>
+        <member name="F:DSoft.UI.Views.DSAbsoluteLayout.DSAbsoluteLayoutParams.x">
+            <summary>The horizontal, or X, location of the child within the view group.</summary>
+            <remarks>The horizontal, or X, location of the child within the view group.</remarks>
+        </member>
+        <member name="F:DSoft.UI.Views.DSAbsoluteLayout.DSAbsoluteLayoutParams.y">
+            <summary>The vertical, or Y, location of the child within the view group.</summary>
+            <remarks>The vertical, or Y, location of the child within the view group.</remarks>
+        </member>
+        <member name="M:DSoft.UI.Views.DSAbsoluteLayout.DSAbsoluteLayoutParams.#ctor(Android.Views.ViewGroup.LayoutParams)">
+            <summary>
+                <inheritDoc>
+                </inheritDoc>
+            </summary>
+        </member>
+        <member name="T:DSoft.UI.Grid.DSGridView">
+            <summary>
+            DSGridView for Android
+            </summary>
+        </member>
+        <member name="E:DSoft.UI.Grid.DSGridView.OnSingleCellTap">
+            <summary>
+            Occurs when on single cell tap.
+            </summary>
+        </member>
+        <member name="E:DSoft.UI.Grid.DSGridView.OnDoubleCellTap">
+            <summary>
+            Occurs when on double cell tap.
+            </summary>
+        </member>
+        <member name="E:DSoft.UI.Grid.DSGridView.OnRowSelect">
+            <summary>
+            Occurs when a row is selected
+            </summary>
+        </member>
+        <member name="E:DSoft.UI.Grid.DSGridView.OnRowDoubleTapped">
+            <summary>
+            Occurs when a row is double tapped
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridView.DataSource">
+            <summary>
+            Gets or sets the data source.  If set rebuilds the grid
+            </summary>
+            <value>The data source.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridView.TableName">
+            <summary>
+            Gets or sets the name of the table in the datasource, when datasource is a dataset.  Will rebuild the grid when set.
+            </summary>
+            <value>The name of the table.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridView.Processor">
+            <summary>
+            Gets the processor.
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridView.Theme">
+            <summary>
+            Gets or sets the theme for the instance of DSGridView.  If none set it will use the global theme
+            </summary>
+            <value>The theme.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.DSGridView.IsTrial">
+            <summary>
+            Gets a value indicating whether this instance is trial.
+            </summary>
+            <value>
+                <c>true</c> if this instance is trial; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.DSGridView" /> class.
+            </summary>
+            <param name="javaReference">Java reference.</param>
+            <param name="transfer">Transfer.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.DSGridView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.DSGridView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.DSGridView" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <Docs>This is a new size or position for this view</Docs>
+            <remarks>Called from layout when this view should
+            assign a size and position to each of its children.
+            Derived classes with children should override
+            this method and call layout on each of
+            their children.</remarks>
+            <format type="text/html">[Android Documentation]</format>
+            <since version="Added in API level 1">
+            </since>
+            <summary>
+            Raises the layout event.
+            </summary>
+            <param name="changed">If set to <c>true</c> changed.</param>
+            <param name="l">L.</param>
+            <param name="t">T.</param>
+            <param name="r">The red component.</param>
+            <param name="b">The blue component.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.ReloadData(System.Boolean)">
+            <summary>
+            Reloads the data.
+            </summary>
+            <param name="clearSelection">If set to <c>true</c> clear selection.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.DrawHeaderRow">
+            <summary>
+            Draws the header row.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnDidScroll(System.Object,DSoft.Datatypes.Types.DSPoint)">
+            <summary>
+            Handles the on did scroll.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="offSet">Off set.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnThemeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the on theme changed.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleTrialTap">
+            <summary>
+            Handles the trial tap.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnHeaderCellTapped(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on header cell tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnSelectedRowChanged(System.Int32)">
+            <summary>
+            Handles the on selected row changed.
+            </summary>
+            <param name="RowIndex">Row index.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnCellSingleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on cell single tap.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnCellDoubleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on cell double tap.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnRowDoubleSelect(DSoft.Datatypes.Grid.Interfaces.IDSGridRowView)">
+            <summary>
+            Handles the on row double select.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.DSGridView.HandleOnRowSingleSelect(DSoft.Datatypes.Grid.Interfaces.IDSGridRowView)">
+            <summary>
+            Handles the on row single select.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="T:DSoft.UI.Grid.Views.DSGridViewContainer">
+            <summary>
+            DS grid view.
+            </summary>
+        </member>
+        <member name="E:DSoft.UI.Grid.Views.DSGridViewContainer.OnDidScroll">
+            <summary>
+            Occurs when the grid view is scrolled
+            </summary>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridViewContainer.ContentSize">
+            <summary>
+            Gets or sets the size of the content.
+            </summary>
+            <value>The size of the content.</value>
+        </member>
+        <member name="P:DSoft.UI.Grid.Views.DSGridViewContainer.IsTrial">
+            <summary>
+            Gets a value indicating whether this instance is trial.
+            </summary>
+            <value>
+                <c>true</c> if this instance is trial; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridViewContainer" /> class.
+            </summary>
+            <param name="javaReference">Java reference.</param>
+            <param name="transfer">Transfer.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridViewContainer" /> class.
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.#ctor(DSoft.UI.Grid.DSGridView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridViewContainer" /> class.
+            </summary>
+            <param name="grdView">Grd view.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridViewContainer" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.UI.Grid.Views.DSGridViewContainer" /> class.
+            </summary>
+            <param name="context">Context.</param>
+            <param name="attrs">Attrs.</param>
+            <param name="defStyle">Def style.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.Initialize">
+            <summary>
+            Initialize this instance.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.BuildGrid">
+            <summary>
+            Builds the grid.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.CleanUpViews">
+            <summary>
+            Cleans up views.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.DrawViews">
+            <summary>
+            Draws the views.
+            </summary>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.IsAboveScreen(System.Single,System.Single)">
+            <summary>
+            Determines whether this instance is above screen the specified aTop aHeight.
+            </summary>
+            <returns>
+                <c>true</c> if this instance is above screen the specified aTop aHeight; otherwise, <c>false</c>.</returns>
+            <param name="aTop">A top.</param>
+            <param name="aHeight">A height.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.IsBelowScreen(System.Single,System.Single)">
+            <summary>
+            Determines whether this instance is below screen the specified aTop aHeight.
+            </summary>
+            <returns>
+                <c>true</c> if this instance is below screen the specified aTop aHeight; otherwise, <c>false</c>.</returns>
+            <param name="aTop">A top.</param>
+            <param name="aHeight">A height.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.ShouldShowRow(System.Single,System.Single)">
+            <summary>
+            Checks to see if the row should show
+            </summary>
+            <returns>
+                <c>true</c>, if show row was shoulded, <c>false</c> otherwise.</returns>
+            <param name="aTop">A top.</param>
+            <param name="aHeight">A height.</param>
+        </member>
+        <member name="M:DSoft.UI.Grid.Views.DSGridViewContainer.OnScrollChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <Docs>Current horizontal scroll origin.</Docs>
+            <param name="oldl">Previous horizontal scroll origin.</param>
+            <summary>
+            This is called in response to an internal scroll in this view (i.e., the
+            view scrolled its own contents).
+            </summary>
+            <param name="l">L.</param>
+            <param name="t">T.</param>
+            <param name="oldt">Oldt.</param>
+        </member>
+    </members>
+</doc>

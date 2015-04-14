@@ -1,0 +1,1205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSoft.Datatypes</name>
+    </assembly>
+    <members>
+        <member name="T:DSoft.Datatypes.Types.DSColor">
+            <summary>
+            Cross platform color representation class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.RedValue">
+            <summary>
+            Red value
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.GreenValue">
+            <summary>
+            Green value
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.BlueValue">
+            <summary>
+            Blue value
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.AlphaValue">
+            <summary>
+            Alpha value
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.PatternImage">
+            <summary>
+            Gets or sets the pattern image.
+            </summary>
+            <value>The pattern image.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSColor" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSColor" /> class.
+            </summary>
+            <param name="Red">Red 0 - 1.0</param>
+            <param name="Green">Green 0 - 1.0</param>
+            <param name="Blue">Blue 0 - 1.0</param>
+            <param name="Alpha">Alpha 0 - 1.0</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSColor" /> class.
+            </summary>
+            <param name="Red">Red 0 - 1.0</param>
+            <param name="Green">Green 0 - 1.0</param>
+            <param name="Blue">Blue 0 - 1.0</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSColor" /> class.
+            </summary>
+            <param name="Red">Red 0-255</param>
+            <param name="Green">Green 0-255</param>
+            <param name="Blue">Blue 0-255</param>
+            <param name="Alpha">Alpha 0-255</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSColor" /> class.
+            </summary>
+            <param name="Hex">Hex value - 6 digits(RGB) or 8(ARGB)</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSColor.FromPatternImage(DSoft.Datatypes.Types.DSBitmap)">
+            <summary>
+            From an image that will be a pattern
+            </summary>
+            <returns>The pattern image.</returns>
+            <param name="Image">Image.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Red">
+            <summary>
+            Red Color
+            </summary>
+            <value>The red.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Black">
+            <summary>
+            Black Color
+            </summary>
+            <value>The black.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Blue">
+            <summary>
+            Blue Color
+            </summary>
+            <value>The blue.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Brown">
+            <summary>
+            Brown Color
+            </summary>
+            <value>The brown.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Clear">
+            <summary>
+            Clear Color
+            </summary>
+            <value>The clear.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Cyan">
+            <summary>
+            Cyan Color
+            </summary>
+            <value>The cyan.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.DarkGray">
+            <summary>
+            Dark Gray Color
+            </summary>
+            <value>The dark gray.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.DarkTextColor">
+            <summary>
+            Gets the color of the dark text.
+            </summary>
+            <value>The color of the dark text.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Gray">
+            <summary>
+            Gray Color
+            </summary>
+            <value>The gray.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Green">
+            <summary>
+            Green Color
+            </summary>
+            <value>The green.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.LightGray">
+            <summary>
+            Light Gray Color
+            </summary>
+            <value>The light gray.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.LightTextColor">
+            <summary>
+            Light Text Color
+            </summary>
+            <value>The color of the light text.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Magenta">
+            <summary>
+            Magenta Color
+            </summary>
+            <value>The magenta.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Orange">
+            <summary>
+            Orange Color
+            </summary>
+            <value>The orange.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Purple">
+            <summary>
+            Purple Color
+            </summary>
+            <value>The purple.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.White">
+            <summary>
+            White Color
+            </summary>
+            <value>The white.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSColor.Yellow">
+            <summary>
+            Yellow Color
+            </summary>
+            <value>The yellow.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSFont">
+            <summary>
+            Cross platform font class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSFont.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+            <value>The size of the font.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSFont.FontFamily">
+            <summary>
+            Gets or sets the font family.
+            </summary>
+            <value>The font family.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSFont.FontWeight">
+            <summary>
+            Gets or sets the font weight.
+            </summary>
+            <value>The font weight.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSFont.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSFont" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSFont.#ctor(System.String,System.Single,DSoft.Datatypes.Enums.FontWeight)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSFont" /> class.
+            </summary>
+            <param name="FontFamily">Font family.</param>
+            <param name="FontSize">Font size.</param>
+            <param name="FontWeight">Font weight.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSFont.NormalFontOfSize(System.Single)">
+            <summary>
+            Normals the size of the font of.
+            </summary>
+            <returns>The font of size.</returns>
+            <param name="Size">Size.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSFont.BoldFontOfSize(System.Single)">
+            <summary>
+            Bolds the size of the font of.
+            </summary>
+            <returns>The font of size.</returns>
+            <param name="Size">Size.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.FontWeight">
+            <summary>
+            Font weight.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.FontWeight.Normal">
+            <summary>
+            Normal
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.FontWeight.Bold">
+            <summary>
+            Bold
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.TextAlignment">
+            <summary>
+            Text alignment.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.TextAlignment.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.TextAlignment.Middle">
+            <summary>
+            Middle
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.TextAlignment.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.MoreMenuItemType">
+            <summary>
+            More menu item type.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.MoreMenuItemType.View">
+            <summary>
+            Item the links to content
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.MoreMenuItemType.Action">
+            <summary>
+            Item that executes code
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.MoreMenuItemType.Segment">
+            <summary>
+            Segement or Section Header
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.MoreMenuItemType.Blank">
+            <summary>
+            Blank spacer
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.FlyoutMenuState">
+            <summary>
+            Flyout menu state.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.FlyoutMenuState.Closed">
+            <summary>
+            Menu is closed
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.FlyoutMenuState.LeftOpen">
+            <summary>
+            Left menu is visible
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.FlyoutMenuState.RightOpen">
+            <summary>
+            Right menu is visible
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.ToolbarMode">
+            <summary>
+            Toolbar operation mode
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ToolbarMode.Toolbar">
+            <summary>
+            Toolbar mode, no bottom highlight on android
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ToolbarMode.Navigation">
+            <summary>
+            Navigation mode, bottom highligh on android
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.BorderStyle">
+            <summary>
+            Border style.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BorderStyle.None">
+            <summary>
+            No border
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BorderStyle.Full">
+            <summary>
+            All Sides
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BorderStyle.HorizontalOnly">
+            <summary>
+            Top and Bottom only
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BorderStyle.VerticalOnly">
+            <summary>
+            Left and Right only
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.GridHeaderStyle">
+            <summary>
+            Grid header style.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.GridHeaderStyle.Standard">
+            <summary>
+            Standard scrollable column headers
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.GridHeaderStyle.Fixed">
+            <summary>
+            Fixed column headers
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.GridHeaderStyle.None">
+            <summary>
+            Column Headers not visible
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.CellStyle">
+            <summary>
+            Determines the style of the cell
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellStyle.Cell">
+            <summary>
+            Cell style
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellStyle.Header">
+            <summary>
+            Header style
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellStyle.Blank">
+            <summary>
+            Empty style
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellStyle.RowSelector">
+            <summary>
+            Row Selector Style
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.CellPositionType">
+            <summary>
+            The cell position type in the grid
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.LeftTop">
+            <summary>
+            Top left
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.LeftMiddle">
+            <summary>
+            Middle Left
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.LeftBottom">
+            <summary>
+            Bottom Left
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.CenterTop">
+            <summary>
+            Top Center
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.CenterMiddle">
+            <summary>
+            Center
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.CenterBottom">
+            <summary>
+            Bottom Center
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.RightTop">
+            <summary>
+            Top Right
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.RightMiddle">
+            <summary>
+            Right Center
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellPositionType.RightBottom">
+            <summary>
+            Bottom Right
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.RowPositionType">
+            <summary>
+            Row position type.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.RowPositionType.Top">
+            <summary>
+            Top Row
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.RowPositionType.Middle">
+            <summary>
+            Middle Rows
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.RowPositionType.Bottom">
+            <summary>
+            Bottom Row
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.CellSortIndicatorStyle">
+            <summary>
+            Cell sort indicator style.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellSortIndicatorStyle.None">
+            <summary>
+            No Indicator
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellSortIndicatorStyle.Up">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.CellSortIndicatorStyle.Down">
+            <summary>
+            Descending
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.BooleanFormatterStyle">
+            <summary>
+            Boolean formatter style.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BooleanFormatterStyle.Text">
+            <summary>
+            Show as text
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.BooleanFormatterStyle.Image">
+            <summary>
+            Show using images for true and false values
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.SortIndicatorStyle">
+            <summary>
+            Style of the sort indicator
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.SortIndicatorStyle.None">
+            <summary>
+            No indicator
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.SortIndicatorStyle.Ascending">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.SortIndicatorStyle.Descending">
+            <summary>
+            Descending
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Enums.ScrollToMode">
+            <summary>
+            Mode for scrolling to a selected row
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ScrollToMode.None">
+            <summary>
+            Don't scroll
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ScrollToMode.Top">
+            <summary>
+            Scroll to top
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ScrollToMode.Middle">
+            <summary>
+            Scroll to middle
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Enums.ScrollToMode.Bottom">
+            <summary>
+            Scroll to bottom
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSBitmap">
+            <summary>
+            Bitmap class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSBitmap.ImageData">
+            <summary>
+            Gets or sets the image data.
+            </summary>
+            <value>The image data.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSBitmap.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSBitmap" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSBitmap.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSBitmap" /> class.
+            </summary>
+            <param name="Data">Data.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Base.DSFormatter">
+            <summary>
+            Base formatter class for formatting the Cells
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Base.DSFormatter.Size">
+            <summary>
+            Gets or sets the size of the column
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSSize">
+            <summary>
+            Cross platform size class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSSize.Width">
+            <summary>
+            Gets or sets the width
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSSize.Height">
+            <summary>
+            Gets or sets the hieght.
+            </summary>
+            <value>The hieght.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSSize.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSSize" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSSize.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSSize" /> class.
+            </summary>
+            <param name="Width">Width.</param>
+            <param name="Height">Height.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSMoreMenuItem">
+            <summary>
+            Menu item class, defaults to type of blank
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreMenuItem.ItemType">
+            <summary>
+            Gets or sets the menu item type of the item.
+            </summary>
+            <value>The type of the item.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreMenuItem.Title">
+            <summary>
+            Gets or sets the title of the menu item
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreMenuItem.HideMenuOnTap">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:DSoft.Datatypes.UI.DSMoreMenuItem" /> hide menu on tap.
+            </summary>
+            <value>
+                <c>true</c> if hide menu on tap; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreMenuItem" /> class.
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Base.ObservableClass">
+            <summary>
+            Observable class with notification methods
+            </summary>
+        </member>
+        <member name="E:DSoft.Datatypes.Base.ObservableClass.PropertyChanged">
+            <summary>
+            Occurs when property changed.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Base.ObservableClass.PropertyDidChange(System.String)">
+            <summary>
+            Property has changed
+            </summary>
+            <param name="Name">Name.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSMoreButtonMenuItem">
+            <summary>
+            More item to treat as a button
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreButtonMenuItem.Command">
+            <summary>
+            Gets or sets the command to be called when the item is tapped
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreButtonMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreButtonMenuItem" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreButtonMenuItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreButtonMenuItem" /> class.
+            </summary>
+            <param name="Title">Title.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSMoreContentMenuItem">
+            <summary>
+            More menu item with a view to be displayed as a content
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreContentMenuItem.ContentType">
+            <summary>
+            Gets the type of the content.
+            </summary>
+            <value>The type of the content.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreContentMenuItem.Content">
+            <summary>
+            Gets or sets the boxed content object
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreContentMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreContentMenuItem" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreContentMenuItem.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreContentMenuItem" /> class.
+            </summary>
+            <param name="Content">Content.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreContentMenuItem.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreContentMenuItem" /> class.
+            </summary>
+            <param name="Name">Name.</param>
+            <param name="Content">Content.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSMoreContentMenuItem`1">
+            <summary>
+            More menu item with a view to be displayed as a generic type
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSMoreContentMenuItem`1.TypedContent">
+            <summary>
+            Gets or sets the content as the Generic Type
+            </summary>
+            <value>The content of the typed.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreContentMenuItem`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreContentMenuItem" /> class.
+            </summary>
+            <param name="Content">Content.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreContentMenuItem`1.#ctor(System.String,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreContentMenuItem" /> class.
+            </summary>
+            <param name="Name">Name.</param>
+            <param name="Content">Content.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSMoreSegmentMenuItem">
+            <summary>
+            Segement or Section title menu item
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreSegmentMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreSegmentMenuItem" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.DSMoreSegmentMenuItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.DSMoreSegmentMenuItem" /> class.
+            </summary>
+            <param name="Name">Name.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection">
+            <summary>
+            Collection of DSMoreMenuItems
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection.Title">
+            <summary>
+            Gets or sets the menu title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection" /> class.
+            </summary>
+            <param name="Name">Name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection.CountItems(DSoft.Datatypes.Enums.MoreMenuItemType)">
+            <summary>
+            Counts the number of items that match the
+            </summary>
+            <returns>The items.</returns>
+            <param name="Type">Type.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.UI.Collections.DSMoreMenuItemCollection.FindFirst``1">
+            <summary>
+            Finds the first instance of the Type
+            </summary>
+            <returns>The first.</returns>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.Interfaces.IDSFlyoutContent">
+            <summary>
+            Flyout content interface
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Interfaces.IDSFlyoutContent.Title">
+            <summary>
+            Gets or sets the title for the content
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.DSToolbarItem">
+            <summary>
+            Toolbar item
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSToolbarItem.Content">
+            <summary>
+            Gets or sets the content of the button e.g. Text or Image
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.DSToolbarItem.ClickCommand">
+            <summary>
+            Gets or sets the click command.
+            </summary>
+            <value>The click command.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.Collections.DSToolbarItemCollection">
+            <summary>
+            Collection of DSToolbarItem objects
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.DisposableList`1">
+            <summary>
+            A disposable list class for Disposable objects
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.DisposableList`1.Dispose">
+            <summary>
+            Releases all resource used by the object
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSPoint">
+            <summary>
+            Point definition class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSPoint.Empty">
+            <summary>
+            Gets the empty.
+            </summary>
+            <value>The empty.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSPoint.IsEmpty">
+            <summary>
+            Gets a value indicating whether this instance is empty.
+            </summary>
+            <value>
+                <c>true</c> if this instance is empty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSPoint.X">
+            <summary>
+            Gets or sets the X
+            </summary>
+            <value>The x.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSPoint.Y">
+            <summary>
+            Gets or sets the Y
+            </summary>
+            <value>The y.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSPoint.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSPoint" /> class.
+            </summary>
+            <param name="x">The x coordinate.</param>
+            <param name="y">The y coordinate.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSRectangle">
+            <summary>
+            Rectangle class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Empty">
+            <summary>
+            Gets an Empty rectangle
+            </summary>
+            <value>The empty.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Bottom">
+            <summary>
+            Gets the bottom.
+            </summary>
+            <value>The bottom.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.IsEmpty">
+            <summary>
+            Gets a value indicating whether this instance is empty.
+            </summary>
+            <value>
+                <c>true</c> if this instance is empty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Left">
+            <summary>
+            Gets the left.
+            </summary>
+            <value>The left.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>The location.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Right">
+            <summary>
+            Gets the right.
+            </summary>
+            <value>The right.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Top">
+            <summary>
+            Gets the top.
+            </summary>
+            <value>The top.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.X">
+            <summary>
+            Gets or sets the x.
+            </summary>
+            <value>The x.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSRectangle.Y">
+            <summary>
+            Gets or sets the y.
+            </summary>
+            <value>The y.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSRectangle.#ctor(DSoft.Datatypes.Types.DSPoint,DSoft.Datatypes.Types.DSSize)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSRectangle" /> class.
+            </summary>
+            <param name="location">Location.</param>
+            <param name="size">Size.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSRectangle.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSRectangle" /> class.
+            </summary>
+            <param name="x">The x coordinate.</param>
+            <param name="y">The y coordinate.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSRectangle.FromLTRB(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            From the Left,Top,Right and back
+            </summary>
+            <returns>The LTR.</returns>
+            <param name="left">Left.</param>
+            <param name="top">Top.</param>
+            <param name="right">Right.</param>
+            <param name="bottom">Bottom.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSRectangle.ApplyMargin(DSoft.Datatypes.Types.DSInset)">
+            <summary>
+            Applies the margin.
+            </summary>
+            <param name="Inset">Inset.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSRectangle.CenterInRectangle(DSoft.Datatypes.Types.DSRectangle)">
+            <summary>
+            Centers the in rectangle.
+            </summary>
+            <param name="Target">Target.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Formatters.DSImageFormatter">
+            <summary>
+            A formatter class for determining the layout options for an image
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSImageFormatter.Margin">
+            <summary>
+            Margin around the image
+            </summary>
+            <value>The margin.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSImageFormatter.#ctor(DSoft.Datatypes.Types.DSSize)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSImageFormatter" /> class.
+            </summary>
+            <param name="ImageSize">Image size.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSImageFormatter.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.Formatters.DSBooleanFormatter">
+            <summary>
+            Formatter class for Boolean Cells
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSBooleanFormatter.TrueValue">
+            <summary>
+            Gets or sets the true value either the text to appear or name of the image to show
+            </summary>
+            <value>The true value.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSBooleanFormatter.FalseValue">
+            <summary>
+            Gets or sets the false value either the text to appear or name of the image to show
+            </summary>
+            <value>The false value.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSBooleanFormatter.Style">
+            <summary>
+            Gets or sets the style of the boolean column
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSBooleanFormatter.TextAlignment">
+            <summary>
+            Gets or sets the text alignment when style is Text
+            </summary>
+            <value>The text alignment.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSBooleanFormatter.#ctor(DSoft.Datatypes.Enums.BooleanFormatterStyle,System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSBooleanFormatter" /> class.
+            </summary>
+            <param name="Style">Style.</param>
+            <param name="TrueValue">True value.</param>
+            <param name="FalseValue">False value.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSBooleanFormatter.#ctor(DSoft.Datatypes.Enums.BooleanFormatterStyle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSBooleanFormatter" /> class.
+            </summary>
+            <param name="Style">Style.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSBooleanFormatter.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.Types.DSInset">
+            <summary>
+            Inset class for margins and padding
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSInset.Top">
+            <summary>
+            Gets or sets the top.
+            </summary>
+            <value>The top.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSInset.Bottom">
+            <summary>
+            Gets or sets the bottom.
+            </summary>
+            <value>The bottom.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSInset.Left">
+            <summary>
+            Gets or sets the left.
+            </summary>
+            <value>The left.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Types.DSInset.Right">
+            <summary>
+            Gets or sets the right.
+            </summary>
+            <value>The right.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSInset.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSInset" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSInset.#ctor(System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSInset" /> class.
+            </summary>
+            <param name="Size">Set Uniform size for all side</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Types.DSInset.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Types.DSInset" /> class.
+            </summary>
+            <param name="Left">Left.</param>
+            <param name="Top">Top.</param>
+            <param name="Right">Right.</param>
+            <param name="Bottom">Bottom.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Formatters.DSTextFormatter">
+            <summary>
+            Text formatter for DSDataColumn
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSTextFormatter.Size">
+            <summary>
+            Gets or sets the size of the column - Ignored in DSTextFormatter
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSTextFormatter.Alignment">
+            <summary>
+            Gets or sets the alignment.
+            </summary>
+            <value>The alignment.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSTextFormatter.#ctor(DSoft.Datatypes.Enums.TextAlignment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSTextFormatter" /> class.
+            </summary>
+            <param name="Alignment">Alignment.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Helpers.GenericsHelper">
+            <summary>
+            Helper class for generic types
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Helpers.GenericsHelper.Instatiate``1(System.Object[])">
+            <summary>
+            Instatiate the type with the specified Params.
+            </summary>
+            <param name="Params">Parameters.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="T:DSoft.Datatypes.UI.Interfaces.IDSCustomView">
+            <summary>
+            Inteface for custom view in DSGridView
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Interfaces.IDSCustomView.ViewFrame">
+            <summary>
+            Gets or sets the view frame/rectangle
+            </summary>
+            <value>The view frame.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Interfaces.IDSCustomView.Value">
+            <summary>
+            Gets or sets the value for the view
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Interfaces.IDSCustomView.IsReadOnly">
+            <summary>
+            Gets or sets a value indicating whether the view is in readonly mode
+            </summary>
+            <value>
+                <c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.UI.Interfaces.IDSCustomView.UpdateAction">
+            <summary>
+            Gets or sets the update action.
+            </summary>
+            <value>The update action.</value>
+        </member>
+        <member name="T:DSoft.Datatypes.Formatters.DSViewFormatter">
+            <summary>
+            Formatter with custom view class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSViewFormatter.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>The view.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSViewFormatter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSViewFormatter" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Formatters.DSViewFormatter.#ctor(DSoft.Datatypes.UI.Interfaces.IDSCustomView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Formatters.DSViewFormatter" /> class.
+            </summary>
+            <param name="">.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Formatters.DSViewFormatter`1">
+            <summary>
+            Formatter with generic type for view
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Formatters.DSViewFormatter`1.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>The view.</value>
+        </member>
+    </members>
+</doc>

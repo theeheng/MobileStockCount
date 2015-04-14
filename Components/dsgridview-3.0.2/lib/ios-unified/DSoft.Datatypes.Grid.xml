@@ -1,0 +1,1075 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DSoft.Datatypes.Grid</name>
+    </assembly>
+    <members>
+        <member name="T:DSoft.Datatypes.Grid.Data.DSDataColumn">
+            <summary>
+            Represents a column of data in a DataTable
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.Formatter">
+            <summary>
+            Gets or sets the formatter of the cell
+            </summary>
+            <value>The formatter.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.ColumnName">
+            <summary>
+            Name of the column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.DataType">
+            <summary>
+            Data type of the column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.Caption">
+            <summary>
+            Caption to be used in the column header
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.AllowResize">
+            <summary>
+            Allow the user to resize the column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.AllowSort">
+            <summary>
+            Allow the user to sort this column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.AllowReorder">
+            <summary>
+            Allow the user to reorder this column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.ReadOnly">
+            <summary>
+            Column is read only
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.Data.DSDataColumn.Width">
+            <summary>
+            The display width of the column
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.IsSortColumn">
+            <summary>
+            Gets or sets a value indicating whether this instance is the column sorting is done on
+            </summary>
+            <value>
+                <c>true</c> if this instance is sort column; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataColumn.UseDescendingSort">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:DSoft.Datatypes.Grid.Data.DSDataColumn" /> should use ascending sort.
+            </summary>
+            <value>
+                <c>true</c> if use ascending sort; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataColumn.#ctor(System.String)">
+            <summary>
+            Constructor with a column name.
+            The caption (header) will be the same.
+            Defaults to "String" type
+            </summary>
+            <param name="columnName">Name of the column</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataColumn.#ctor(System.String,System.Type)">
+            <summary>
+            Constructor with a column name and a type.
+            The caption (header) will be the same as the column name.
+            </summary>
+            <param name="columnName">Name of the column</param>
+            <param name="columnType">Type of the column</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataColumn.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:DSoft.Datatypes.Grid.Data.DSDataColumn" />.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:DSoft.Datatypes.Grid.Data.DSDataColumn" />.</returns>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.DSDataRow">
+            <summary>
+            Represents a row of data in a DataTable
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataRow.RowId">
+            <summary>
+            Gets the row identifier.
+            </summary>
+            <value>The row identifier.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataRow.Items">
+            <summary>
+            Gets the items in the row as a collection of DSDataValue objects
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataRow.Item(System.String)">
+            <summary>
+            Property indexer to access the items collection by key
+            </summary>
+            <param name="key">Key (column name)</param>
+            <returns>Value of the corresponding cell</returns>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataRow.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataRow.Equals(System.Object)">
+            <summary>
+            Specifies equality between objects
+            </summary>
+            <param name="obj">Object to compare to</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.DSDataSet">
+            <summary>
+            DSoft DataSet class
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataSet.Name">
+            <summary>
+            Name of the DataSet
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataSet.Tables">
+            <summary>
+            Collection of DataTables
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataSet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.Data.DSDataSet" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataSet.#ctor(System.String)">
+            <summary>
+            Constructor of the class
+            </summary>
+            <param name="name">Name of the DataSet</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataSet.GetRowCount(System.String)">
+            <summary>
+            Gets the row count.
+            </summary>
+            <returns>The row count.</returns>
+            <param name="TableName">Table name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataSet.GetRow(System.Int32,System.String)">
+            <summary>
+            Gets the row.
+            </summary>
+            <returns>The row.</returns>
+            <param name="Index">Index.</param>
+            <param name="TableName">Table name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataSet.GetValue(System.Int32,System.String,System.String)">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns>The value.</returns>
+            <param name="RowIndex">Row index.</param>
+            <param name="TableName">Table name.</param>
+            <param name="ColumnName">Column name.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.DSDataTable">
+            <summary>
+            Represents a DataTable
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataTable.Name">
+            <summary>
+            Name of the DataTable
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataTable.Columns">
+            <summary>
+            Collection of columns
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataTable.Rows">
+            <summary>
+            Collection of rows
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.Data.DSDataTable" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.#ctor(System.String)">
+            <summary>
+            Constructor of the DataTable with a name
+            </summary>
+            <param name="name">Name of the DataTable</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.SortByColumn(System.Int32)">
+            <summary>
+            Sorts the datatable by specified column.
+            </summary>
+            <param name="ColumnIndex">Column index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetRowCount">
+            <summary>
+            Gets the row count.
+            </summary>
+            <returns>The row count.</returns>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetRow(System.Int32)">
+            <summary>
+            Gets the row at the specified indexs
+            </summary>
+            <returns>The row.</returns>
+            <param name="Index">Index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetRows(System.Int32[])">
+            <summary>
+            Gets the associated with the indexes
+            </summary>
+            <returns>The rows.</returns>
+            <param name="Indexes">Indexes.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetValue(System.Int32,System.String)">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns>The value.</returns>
+            <param name="RowIndex">Row index.</param>
+            <param name="ColumnName">Column name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.SetValue(System.Int32,System.String,System.Object)">
+            <summary>
+            Sets the value.
+            </summary>
+            <param name="RowIndex">Row index.</param>
+            <param name="ColumnName">Column name.</param>
+            <param name="Value">Value.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.IndexOfRow(System.String)">
+            <summary>
+            Return the index of the row with the matching ids
+            </summary>
+            <returns>The of row.</returns>
+            <param name="RowId">Row identifier.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.IndexesOfRows(System.String[])">
+            <summary>
+            Return the index of the rows with the matching ids
+            </summary>
+            <returns>The of rows.</returns>
+            <param name="RowIds">Row identifiers.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetRow(System.String)">
+            <summary>
+            Rows the with identifier.
+            </summary>
+            <returns>The with identifier.</returns>
+            <param name="RowId">Row identifier.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.DSDataTable.GetRows(System.String[])">
+            <summary>
+            Return the the rows with the matching ids
+            </summary>
+            <returns>The rows.</returns>
+            <param name="RowIds">Row identifiers.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.DSDataValue">
+            <summary>
+            Stores the values for columns in a row
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataValue.ColumnName">
+            <summary>
+            Gets or sets the name of the column.
+            </summary>
+            <value>The name of the column.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.DSDataValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="E:DSoft.Datatypes.Grid.Data.DSDataValue.PropertyChanged">
+            <summary>
+            Occurs when property changed.
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.DSDataColumnCollection">
+            <summary>
+            Collection of columns in a DataTable
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.DSDataColumnCollection.Item(System.String)">
+            <summary>
+            Indexer to access the columns based on column name
+            </summary>
+            <param name="key">Name of the column</param>
+            <returns>DataColumns</returns>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataColumnCollection.Add(DSoft.Datatypes.Grid.Data.DSDataColumn)">
+            <summary>
+            Adds a new column to the collection checking for duplicates in the name
+            </summary>
+            <param name="dc">New column to add</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataColumnCollection.ResetSortedColumn(DSoft.Datatypes.Grid.Data.DSDataColumn)">
+            <summary>
+            Resets the current sorted column and sets it to the new column
+            </summary>
+            <param name="dc">Dc.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataColumnCollection.SortColumn">
+            <summary>
+            Returns the current sort columns
+            </summary>
+            <returns>The column.</returns>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.DSDataRowCollection">
+            <summary>
+            Collection of rows in a DataTable
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataRowCollection.Sort(DSoft.Datatypes.Grid.Data.DSDataColumn)">
+            <summary>
+            Sort the row collection using the specified Column.
+            </summary>
+            <param name="Column">Column.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.DSDataTableCollection">
+            <summary>
+            Collection of tables
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.DSDataTableCollection.Item(System.String)">
+            <summary>
+            Indexer to access the tables based on table name
+            </summary>
+            <param name="key">Name of the table</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataTableCollection.Add(DSoft.Datatypes.Grid.Data.DSDataTable)">
+            <summary>
+            Adds a new table to the collection checking for duplicates in the name
+            </summary>
+            <param name="dt">New DataTable to add</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.DSDataValueCollection">
+            <summary>
+            Collection of DSDataValue objects
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.DSDataValueCollection.Keys">
+            <summary>
+            Gets the keys in the collection
+            </summary>
+            <value>The keys.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.DSDataValueCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.DSDataValueCollection" /> with the specified ColumnName.
+            </summary>
+            <param name="ColumnName">Column name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.DSDataValueCollection.ContainsKey(System.String)">
+            <summary>
+            Check if the collection Contains the key.
+            </summary>
+            <returns>
+                <c>true</c>, if key was containsed, <c>false</c> otherwise.</returns>
+            <param name="Key">Key.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Interfaces.IDSDataSource">
+            <summary>
+            Interface for the Datasources
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo">
+            <summary>
+            Meta data about a DSGridViewCell object
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.xPosition">
+            <summary>
+            The X(Column) index of the grow
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Frame">
+            <summary>
+            The frame to draw the column
+            </summary>
+            <value>The frame.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.x">
+            <summary>
+            Gets or sets the x.
+            </summary>
+            <value>The x.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.y">
+            <summary>
+            Gets or sets the y.
+            </summary>
+            <value>The y.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.SortStyle">
+            <summary>
+            Style of the sort indicator
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Formatter">
+            <summary>
+            Formatter to apply to the cell
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.IsReadOnly">
+            <summary>
+            Gets or sets a value indicating whether this instance is read only.
+            </summary>
+            <value>
+                <c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" />. The <see cref="M:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Dispose" /> method leaves the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" /> in an unusable state. After calling
+            <see cref="M:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" /> so the garbage collector can reclaim the memory
+            that the <see cref="T:DSoft.Datatypes.Grid.MetaData.DSGridViewCellInfo" /> was occupying.</remarks>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection">
+            <summary>
+            Collection of DSGridViewCellInfo objects
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection.Dispose">
+            <summary>
+            Releases all resource used by the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection" />. The <see cref="M:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection.Dispose" />
+            method leaves the <see cref="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection" /> in an
+            unusable state. After calling <see cref="M:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection" /> so the garbage collector can
+            reclaim the memory that the <see cref="T:DSoft.Datatypes.Grid.MetaData.Collections.DSGridViewCellInfoCollection" />
+            was occupying.</remarks>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.RowSelectionChangedHandler">
+            <summary>
+            Row selection changed handler.
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.RowSelectedHandlerDelegate">
+            <summary>
+            Row selected handler delegate.  Sender will be of type DSGridRowView
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.CellTappedHandlerDelegate">
+            <summary>
+            Cell tapped handler delegate. Sender will be of type DSGridCellView
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.RowSelectedDelegate">
+            <summary>
+            Row selected delegate. Sender will be of type DSGridRowView
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.IDSDataGridView">
+            <summary>
+            Cross platform IDSGridView platform for defining an shared API
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.IDSDataGridView.Processor">
+            <summary>
+            Gets or sets the processor.
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnHeaderCellTapped(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on header cell tapped.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnSelectedRowChanged(System.Int32)">
+            <summary>
+            Handles the on selected row changed.
+            </summary>
+            <param name="RowIndex">Row index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnCellSingleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on cell single tap.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnCellDoubleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Handles the on cell double tap.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnRowDoubleSelect(DSoft.Datatypes.Grid.Interfaces.IDSGridRowView)">
+            <summary>
+            Handles the on row double select.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.IDSDataGridView.HandleOnRowSingleSelect(DSoft.Datatypes.Grid.Interfaces.IDSGridRowView)">
+            <summary>
+            Handles the on row single select.
+            </summary>
+            <param name="sender">Sender.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Interfaces.IDSGridRowView">
+            <summary>
+            Cross-platform Interface for the DSGridRowView
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Interfaces.IDSGridRowView.Processor">
+            <summary>
+            Gets the processor.
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Interfaces.IDSGridRowView.TearDown">
+            <summary>
+            Tears down the view
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Interfaces.IDSGridRowView.DetachView">
+            <summary>
+            Detaches the view for its parent
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Shared.DSGridProcessor">
+            <summary>
+            DS grid processor.
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.Rows">
+            <summary>
+            Gets the rows.
+            </summary>
+            <value>The rows.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.FreeRows">
+            <summary>
+            Gets or sets the free rows.
+            </summary>
+            <value>The free rows.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.Columns">
+            <summary>
+            Gets the columns.
+            </summary>
+            <value>The columns.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.DataSource">
+            <summary>
+            Gets or sets the data source.  If set rebuilds the grid
+            </summary>
+            <value>The data source.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.TableName">
+            <summary>
+            Gets or sets the name of the table in the datasource, when datasource is a dataset.  Will rebuild the grid when set.
+            </summary>
+            <value>The name of the table.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.CurrentTable">
+            <summary>
+            Gets the current table.
+            </summary>
+            <value>The current table.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.ColDefs">
+            <summary>
+            Gets the col defs.
+            </summary>
+            <value>The col defs.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.NumberOfRows">
+            <summary>
+            Gets the number of rows.
+            </summary>
+            <value>The number of rows.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.RowHeight">
+            <summary>
+            Gets the height of the row.
+            </summary>
+            <value>The height of the row.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.ThemeRowHeight">
+            <summary>
+            Gets or sets the height of the theme row function
+            </summary>
+            <value>The height of the theme row.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.ThemeHeaderHeight">
+            <summary>
+            Gets or sets the height of the theme header.
+            </summary>
+            <value>The height of the theme header.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.ThemeHeaderStyle">
+            <summary>
+            Gets or sets the theme header style.
+            </summary>
+            <value>The theme header style.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.EnableMulitSelect">
+            <summary>
+            Gets or sets a value indicating whether to enable multi-select, updates EnableDeselection with same value
+            </summary>
+            <value>true</value>
+            <c>false</c>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.EnableDeselection">
+            <summary>
+            Gets or sets a value wether Deselection(by tap the same row) will be enabled.  Enabled by default when EnableMultiSelect is enabled
+            </summary>
+            <value>
+                <c>true</c> if enable deselection; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.SelectedItem">
+            <summary>
+            Gets or sets the selected item. If multi-select enabled then it will return the first selected item
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.SelectedItems">
+            <summary>
+            Gets or sets the selected items.
+            </summary>
+            <value>The selected items.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.SelectedIndex">
+            <summary>
+            Gets or sets the index of the selected. If multi-select enabled then it will return the index of the first
+            selected item
+            </summary>
+            <value>The index of the selected.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSGridProcessor.SelectedIndexes">
+            <summary>
+            Gets or sets the selected indexes.
+            </summary>
+            <value>The selected indexes.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.Shared.DSGridProcessor" /> class.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.Reset">
+            <summary>
+            Reset this Processor.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.FindWidthOfColumn(DSoft.Datatypes.Grid.Data.DSDataColumn)">
+            <summary>
+            Finds the width of column.
+            </summary>
+            <returns>The width of column.</returns>
+            <param name="Column">Column.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.CalculateSize">
+            <summary>
+            Calculates the scrollview size.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.TopYForRow(System.Int32)">
+            <summary>
+            Tops the X for row.
+            </summary>
+            <returns>The X for row.</returns>
+            <param name="Index">Index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.GetValue(System.Int32,System.String)">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns>The value.</returns>
+            <param name="Index">Index.</param>
+            <param name="CellName">Cell name.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.SetValue(System.Int32,System.String,System.Object)">
+            <summary>
+            Sets the value for the row and column
+            </summary>
+            <param name="Index">Index.</param>
+            <param name="CellName">Cell name.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.RebuildSelection">
+            <summary>
+            Rebuilds the selection.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.UpdateSelection(System.String)">
+            <summary>
+            Updates the selection.
+            </summary>
+            <param name="RowId">Row identifier.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.UpdateSelection(System.Int32)">
+            <summary>
+            Updates the selection
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.UpdateSelection(System.String[])">
+            <summary>
+            Updates the selection with multi-select
+            </summary>
+            <param name="Indexes">Indexes.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.UpdateSelection(System.Int32[])">
+            <summary>
+            Updates the selection, with multi-select
+            </summary>
+            <param name="Indexes">Indexes.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.ClearSelectedItems(System.Boolean)">
+            <summary>
+            Clears the selected items.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSGridProcessor.FindViewForRow(System.Int32,System.Func{System.Int32,DSoft.Datatypes.Grid.Interfaces.IDSGridRowView})">
+            <summary>
+            Finds the view for row.
+            </summary>
+            <returns>The view for row.</returns>
+            <param name="Index">Index.</param>
+            <param name="NewFunction">New function.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection">
+            <summary>
+            Collection of IDSGridRowView objects
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection" />. The <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection.Dispose" /> method
+            leaves the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection" /> in an unusable state.
+            After calling <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection" /> so the garbage collector can reclaim
+            the memory that the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection" /> was occupying.</remarks>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridRowViewCollection.ViewForRowIndex(System.Int32)">
+            <summary>
+            Returns the view with the row index
+            </summary>
+            <returns>The for row index.</returns>
+            <param name="RowIndex">Row index.</param>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor">
+            <summary>
+            Cell Processor
+            </summary>
+        </member>
+        <member name="E:DSoft.Datatypes.Grid.Shared.DSCellProcessor.OnSelectionStateChanged">
+            <summary>
+            Occurs when on selection state changed.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" /> class.
+            </summary>
+            <param name="viewInvalidatedAction">View invalidated action.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.ViewInvalidatedAction">
+            <summary>
+            Gets or sets the view invalidated action.
+            </summary>
+            <value>The view invalidated action.</value>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.Shared.DSCellProcessor.IsOdd">
+            <summary>
+            Is this an odd cell
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.IsSelected">
+            <summary>
+            gets if the cell is selected
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Style">
+            <summary>
+            The style of the cell
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.Shared.DSCellProcessor.ColumnName">
+            <summary>
+            The name of the column.
+            </summary>
+        </member>
+        <member name="F:DSoft.Datatypes.Grid.Shared.DSCellProcessor.PositionType">
+            <summary>
+            The type of the position.
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.SortStyle">
+            <summary>
+            The sort style.
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Formatter">
+            <summary>
+            Gets or sets the formatter.
+            </summary>
+            <value>The formatter.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.IsReadOnly">
+            <summary>
+            Gets or sets a value indicating whether this instance is read only.
+            </summary>
+            <value>
+                <c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Index">
+            <summary>
+            Calculated index
+            </summary>
+            <value>The index.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.ValueObject">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.ColumnIndex">
+            <summary>
+            The Column Index of the cell within the grid
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.RowIndex">
+            <summary>
+            The Row Index of the cell within the grid
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.GridView">
+            <summary>
+            Gets or sets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSCellProcessor.GridRowView">
+            <summary>
+            Gets or sets the grid row view.
+            </summary>
+            <value>The grid row view.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.HandlePropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the property changed.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.DidSingleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Dids the single tap.
+            </summary>
+            <param name="cell">Cell.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.DidDoubleTap(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Dids the double tap.
+            </summary>
+            <param name="cell">Cell.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" />. The <see cref="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Dispose" /> method leaves the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" /> in an unusable state. After calling
+            <see cref="M:DSoft.Datatypes.Grid.Shared.DSCellProcessor.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" /> so the garbage collector can reclaim the memory that the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSCellProcessor" /> was occupying.</remarks>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Interfaces.IDSGridCellView">
+            <summary>
+            Interface for grid cell view.
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Interfaces.IDSGridCellView.Processor">
+            <summary>
+            Gets the processor for the cell view
+            </summary>
+            <value>The processor.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Interfaces.IDSGridCellView.TearDown">
+            <summary>
+            Tears down the view
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Interfaces.IDSGridCellView.DetachView">
+            <summary>
+            Detaches the view for its parent
+            </summary>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor">
+            <summary>
+            Row processor
+            </summary>
+        </member>
+        <member name="E:DSoft.Datatypes.Grid.Shared.DSRowProcessor.OnSelectionStateChanged">
+            <summary>
+            Occurs when on selection state changed.
+            </summary>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" /> class.
+            </summary>
+            <param name="viewInvalidatedAction">View invalidated action.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.ViewInvalidatedAction">
+            <summary>
+            Gets or sets the view invalidated action.
+            </summary>
+            <value>The view invalidated action.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.GridView">
+            <summary>
+            Gets or sets the grid view.
+            </summary>
+            <value>The grid view.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Style">
+            <summary>
+            The style of the cell
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.RowIndex">
+            <summary>
+            Gets the index of the row.
+            </summary>
+            <value>The index of the row.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.RealRowIndex">
+            <summary>
+            Gets the index of the real row.
+            </summary>
+            <value>The index of the real row.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether this instance is selected.
+            </summary>
+            <value>
+                <c>true</c> if this instance is selected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Columns">
+            <summary>
+            Gets the columns.
+            </summary>
+            <value>The columns.</value>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.PositionType">
+            <summary>
+            The type of the position.
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.RowId">
+            <summary>
+            Gets or sets the row identifier.
+            </summary>
+            <value>The row identifier.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.CalculatePosStyle(DSoft.Datatypes.Grid.Interfaces.IDSGridCellView)">
+            <summary>
+            Calculates the position style.
+            </summary>
+            <returns>The position style.</returns>
+            <param name="cell">Cell.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Cells">
+            <summary>
+            Gets the cells.
+            </summary>
+            <value>The cells.</value>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" />. The <see cref="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Dispose" /> method leaves the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" /> in an unusable state. After calling
+            <see cref="M:DSoft.Datatypes.Grid.Shared.DSRowProcessor.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" /> so the garbage collector can reclaim the memory that the
+            <see cref="T:DSoft.Datatypes.Grid.Shared.DSRowProcessor" /> was occupying.</remarks>
+        </member>
+        <member name="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection">
+            <summary>
+            Collection of IDSGridCellView objects
+            </summary>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> with the specified ColumnName.
+            </summary>
+            <param name="ColumnName">Column name.</param>
+        </member>
+        <member name="P:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> with the specified Index.
+            </summary>
+            <param name="Index">Index.</param>
+        </member>
+        <member name="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> object.
+            </summary>
+            <remarks>Call <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Dispose" /> when you are finished using the
+            <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" />. The <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Dispose" /> method
+            leaves the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> in an unusable state.
+            After calling <see cref="M:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection.Dispose" />, you must release all references to the
+            <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> so the garbage collector can reclaim
+            the memory that the <see cref="T:DSoft.Datatypes.Grid.Data.Collections.IDSGridCellViewCollection" /> was occupying.</remarks>
+        </member>
+    </members>
+</doc>

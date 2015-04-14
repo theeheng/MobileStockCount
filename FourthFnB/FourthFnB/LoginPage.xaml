@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FourthFnB.LoginPage"
+             xmlns:sresource="clr-namespace:FourthFnB.Translation;assembly=FourthFnB">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 40, 0, 0"
+                    Android="0, 40, 0, 0"
+                    WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        
+        <AbsoluteLayout HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+        
+        <Image Source="fourthlogo.jpg" />
+
+        <Entry x:Name="entryUsername" HorizontalOptions="FillAndExpand" Placeholder="{sresource:Translate Text=UsernameLabel}"/>
+        <Entry x:Name="entryPassword" IsPassword="true" HorizontalOptions="FillAndExpand"  Placeholder="{sresource:Translate Text=PasswordLabel}"/>
+        
+       <Button Text="{sresource:Translate Text=LoginButton}" Clicked="OnLoginButtonClicked" HorizontalOptions ="Center"/>
+    </StackLayout>
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsEnabled="{Binding IsBusy}"  Color="Black" BackgroundColor="Gray" Opacity="0.3"
+                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />      
+    </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
